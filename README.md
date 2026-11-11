@@ -2,7 +2,7 @@
 
 Interactieve lesapp voor HVK/MVK: de aanpak van werkdruk, een JD-R-weegschaal en de invulbare UBES-9.
 
-[Open de huidige private lesapp](https://werkdruk-in-beeld-hvk-mvk.apply-8968.chatgpt.site/) · [UBES-9](https://werkdruk-in-beeld-hvk-mvk.apply-8968.chatgpt.site/#ubes)
+[Open de lesapp](https://xenotroy.github.io/werkdruk-in-beeld/) · [JD-R-model](https://xenotroy.github.io/werkdruk-in-beeld/#model) · [UBES-9](https://xenotroy.github.io/werkdruk-in-beeld/#ubes)
 
 ## Lokaal openen
 
@@ -26,7 +26,7 @@ React en Tailwind worden lokaal gebundeld. `src/` bevat de interface en inhoud. 
 
 ## Interactieve grafiek
 
-Naast de JD-R-weegschaal staat een versleepbaar punt met projectielijnen: y = belasting (taakeisen), x = belastbaarheid (hulpbronnen in deze lesmetafoor). Een ring toont de afzonderlijk instelbare herstelruimte. Slepen, klikken en pijltjestoetsen werken samen met de schuifregelaars. Belastbaarheid is hier geen meting van individuele draagkracht; het model berekent geen risicoscore.
+Naast de JD-R-weegschaal staat een versleepbaar punt met projectielijnen: y = belasting (taakeisen), x = belastbaarheid (hulpbronnen in deze lesmetafoor). Een ring toont de afzonderlijk instelbare herstelruimte. Slepen, klikken en pijltjestoetsen werken samen met de schuifregelaars. Het modelbeeld bevat alleen figuren en directe bediening; toelichtingen staan onder Uitleg. Belastbaarheid is hier geen meting van individuele draagkracht; het model berekent geen risicoscore.
 
 ## Onderbouwing
 
@@ -42,4 +42,6 @@ De UBES-vragen zijn van Schaufeli & Bakker. Gebruik is onderworpen aan de [voorw
 
 ## GitHub Pages
 
-De workflow `GitHub Pages` bouwt en controleert de app en publiceert alleen `dist/`. Publicatie moet eerst worden ingesteld in de repository. De huidige repository is privé; Pages is nog niet ingeschakeld.
+De workflow `GitHub Pages` bouwt en controleert de app bij wijzigingen op `main` en publiceert alleen `dist/`. De website en repository zijn openbaar op verzoek van de eigenaar. De volledige scriptie, ontwikkelnotities en ingevulde antwoorden staan niet in de repository.
+
+De bestaande [private Sites-versie](https://werkdruk-in-beeld-hvk-mvk.apply-8968.chatgpt.site/) is een afzonderlijke publicatie.
