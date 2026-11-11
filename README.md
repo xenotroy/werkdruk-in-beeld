@@ -24,6 +24,10 @@ npm run build
 
 React en Tailwind worden lokaal gebundeld. `src/` bevat de interface en inhoud. `dist/naslag.html` bevat de uitgebreide naslag; `dist/assets/werkinstructie-werkdruk.pdf` is de openbare NLA-bron.
 
+## Interactieve grafiek
+
+Naast de JD-R-weegschaal staat een versleepbaar punt met projectielijnen: y = belasting (taakeisen), x = belastbaarheid (hulpbronnen in deze lesmetafoor). Een ring toont de afzonderlijk instelbare herstelruimte. Slepen, klikken en pijltjestoetsen werken samen met de schuifregelaars. Belastbaarheid is hier geen meting van individuele draagkracht; het model berekent geen risicoscore.
+
 ## Onderbouwing
 
 - [NLA-werkinstructie werkdruk, 19 december 2024](https://www.nlarbeidsinspectie.nl/documenten/2024/12/19/werkinstructie-werkstress-door-werkdruk-voorkomen-en-beperken).
