@@ -32,9 +32,8 @@ export default function DemandResourcePlot({demands,resources,recovery,onMove}){
   e.preventDefault();onMove(clamp(demands+changes[e.key][0]),clamp(resources+changes[e.key][1]));
  }
  return <div className="load-plot">
-  <div className="model-visual-heading"><h3>Verplaats de situatie</h3><span>X {modelNumber(resources)} · Y {modelNumber(demands)}</span></div>
   <svg ref={plot} className="load-plot-svg" viewBox="0 0 390 360" role="group" aria-label="Grafiek: belasting en belastbaarheid" onPointerDown={start} onPointerMove={move} onPointerUp={stop} onPointerCancel={stop} onLostPointerCapture={()=>{dragging.current=null}}>
-   <text x="54" y="19" className="plot-axis-title">Belasting</text><text x="54" y="38" className="plot-axis-sub">taakeisen ↑</text>
+   <text x="54" y="19" className="plot-axis-title">Belasting</text>
    {[0,2.5,5,7.5,10].map(n=><g key={n} aria-hidden="true"><line x1={frame.left} x2={frame.right} y1={frame.bottom-n/10*(frame.bottom-frame.top)} y2={frame.bottom-n/10*(frame.bottom-frame.top)} className="plot-grid"/><line y1={frame.top} y2={frame.bottom} x1={frame.left+n/10*(frame.right-frame.left)} x2={frame.left+n/10*(frame.right-frame.left)} className="plot-grid"/></g>)}
    <path d={`M${frame.left} ${frame.top-5} V${frame.bottom} H${frame.right+5}`} className="plot-axis"/>
    {[0,5,10].map(n=><g key={n} aria-hidden="true"><text x="42" y={frame.bottom-n/10*(frame.bottom-frame.top)+4} textAnchor="end" className="plot-tick">{n}</text><text x={frame.left+n/10*(frame.right-frame.left)} y="311" textAnchor="middle" className="plot-tick">{n}</text></g>)}
@@ -47,9 +46,8 @@ export default function DemandResourcePlot({demands,resources,recovery,onMove}){
     <circle cx={x} cy={y} r="15" fill="none" stroke="var(--recovery-ink)" strokeWidth="5" pathLength="100" strokeDasharray={`${recovery*10} 100`} transform={`rotate(-90 ${x} ${y})`}/>
     <circle cx={x} cy={y} r="7" fill="var(--blue-slate)"/>
    </g>
-   <text x="350" y="336" textAnchor="end" className="plot-axis-title">Belastbaarheid →</text><text x="350" y="354" textAnchor="end" className="plot-axis-sub">hulpbronnen in deze oefening</text>
+   <text x="350" y="336" textAnchor="end" className="plot-axis-title">Belastbaarheid →</text>
   </svg>
-  <p className="plot-help" id="plot-help">Sleep of tik · pijltjestoetsen voor kleine stappen.</p>
-  <p className="plot-ring-key"><span aria-hidden="true">◔</span> Ring = herstelruimte <b>{modelNumber(recovery)} / 10</b></p>
+  <p className="sr-only" id="plot-help">Sleep of tik · pijltjestoetsen voor kleine stappen.</p>
  </div>
 }
