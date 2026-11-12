@@ -1,0 +1,12 @@
+import React from 'react';
+// Definitie: UBES-handleiding pp. 5–6. Toepassingen zijn lesvoorbeelden.
+export const ENGAGEMENT = {
+ vitality:{label:'Vitaliteit',short:'Energie & veerkracht',definition:'Energie hebben voor het werk en kunnen volhouden bij tegenslag.',individual:'Je pakt een lastige taak met energie op. Minder energie is een aanleiding om belasting, slaap en herstel te verkennen.',organisation:'Bespreek werktempo, bezetting en herstelruimte. Veel energie bij medewerkers is geen reden om de werkdruk steeds te verhogen.',boundary:'Vitaliteit gaat over ervaren energie; het is geen medische fitheidstest.'},
+ dedication:{label:'Toewijding',short:'Betekenis & betrokkenheid',definition:'Je werk waardevol vinden en er enthousiasme, trots of inspiratie bij voelen.',individual:'Je weet waarvoor je het doet. Bijvoorbeeld: een veilige werkplek realiseren geeft je voldoening.',organisation:'Maak de bijdrage van het werk zichtbaar en bespreek doelen, waardering en invloed. Betrokkenheid kun je ondersteunen, niet afdwingen.',boundary:'Toewijding aan het werk is niet hetzelfde als loyaliteit aan de werkgever of bereidheid tot overwerk.'},
+ absorption:{label:'Absorptie',short:'Opgaan in je werk',definition:'Met plezier zo opgaan in het werk dat de tijd snel lijkt te gaan en stoppen soms lastig is.',individual:'Je zit helemaal in een passende taak. Bewuste pauzes helpen om daar ook weer uit te stappen.',organisation:'Bescherm waar passend de concentratie, met ruimte voor noodzakelijke overdracht, veiligheidschecks en herstel.',boundary:'Absorptie is meer dan concentratie. Veel opgaan in werk bewijst geen betere prestatie; bij sommige taken is omgevingsaandacht juist nodig.'}
+};
+export function EngagementMeaning({dimension}) {
+ const c=ENGAGEMENT[dimension];
+ return <div className="engagement-meaning"><p className="meaning-definition">{c.definition}</p><dl><div><dt>Voor jou</dt><dd>{c.individual}</dd></div><div><dt>Voor de organisatie</dt><dd>{c.organisation}</dd></div></dl><details className="meaning-extra"><summary><span>Goed om te onderscheiden</span><span className="disclosure" aria-hidden="true"/></summary><p>{c.boundary}</p></details></div>
+}
+export function EngagementConcepts(){return <div className="engagement-concepts">{Object.entries(ENGAGEMENT).map(([key,c])=><details className="fold" key={key}><summary><span>{c.label}</span><small>{c.short}</small><span className="disclosure" aria-hidden="true"/></summary><div className="fold-body"><EngagementMeaning dimension={key}/></div></details>)}</div>}

@@ -18,7 +18,7 @@ Open daarna http://localhost:8768/.
 
 ```sh
 npm ci
-node --test tests/ubes-scoring.test.js
+node --test tests/*.test.js
 npm run build
 ```
 
@@ -26,7 +26,13 @@ React en Tailwind worden lokaal gebundeld. `src/` bevat de interface en inhoud. 
 
 ## Interactieve grafiek
 
-Naast de JD-R-weegschaal staat een versleepbaar punt met projectielijnen: y = belasting (taakeisen), x = belastbaarheid (hulpbronnen in deze lesmetafoor). Een ring toont de afzonderlijk instelbare herstelruimte. Slepen, klikken en pijltjestoetsen werken samen met de schuifregelaars. Het modelbeeld bevat alleen figuren en directe bediening; toelichtingen staan onder Uitleg. Belastbaarheid is hier geen meting van individuele draagkracht; het model berekent geen risicoscore.
+Naast de JD-R-weegschaal staat een versleepbaar punt met projectielijnen: y = belasting (taakeisen), x = belastbaarheid (hulpbronnen in deze lesmetafoor). Een ring toont de afzonderlijk instelbare herstelruimte. Slepen, klikken en pijltjestoetsen werken samen met de schuifregelaars. Het modelbeeld bevat alleen figuren en directe bediening; de procesroute klapt in via Menu en staat bij JD-R/UBES standaard dicht. Langere modeltoelichting staat bij Bronnen. Belastbaarheid is hier geen meting van individuele draagkracht; het model berekent geen risicoscore.
+
+## Persoonlijke weging
+
+Onder het model kun je vier taakeisen en vier hulpbronnen wegen. Per factor: hoeveelheid/beschikbaarheid 0–10 en relatief persoonlijk gewicht 1×, 2× of 3×. De gewogen gemiddelden sturen grafiek en weegschaal; dit is een onderwijsrekenregel, geen gevalideerde JD-R-score. Verplaatsen van het punt verschuift de hoeveelheden met behoud van de gewichten. Een scenario zet de gewichten terug op 1×. Herstel staat apart.
+
+Bevlogenheid en de UBES-uitkomst bieden uitklapbare begripsuitleg: vitaliteit, toewijding en absorptie, met betekenis voor individu en organisatie. De officiële vragen, scoring en normering zijn ongewijzigd.
 
 ## Onderbouwing
 
